@@ -9,6 +9,7 @@ app.use(express.urlencoded({extended:true}))
 
 //routes here
 const authRoute = require("./routes/authRoute")
+const productRoute = require("./routes/productRoute")
 
 // test api to check if server is live
 app.get("/",(req,res)=>{
@@ -17,7 +18,8 @@ app.get("/",(req,res)=>{
     })
 })
 
-app.use("",authRoute)
+app.use("/api",authRoute)
+app.use("/api",productRoute)
 
 
 // listen server
