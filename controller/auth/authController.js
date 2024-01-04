@@ -47,7 +47,7 @@ exports.loginUser = async(req,res)=>{
         })
     }
 
-    // passwordd checking
+    // password checking
     const isMatched = bcrypt.compareSync(password,userFound[0].userPassword)
 
     if(isMatched){
